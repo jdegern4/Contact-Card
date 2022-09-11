@@ -59,3 +59,20 @@ window.deleteCard = (e) => {
     // Reload the ROM
     fetchCards();
 };
+
+window.editCard = (e) => {
+    profileId = parseInt(e.dataset.id);
+
+    let editName = e.dataset.name;
+    let editEmail = e.dataset.email;
+    let editPhone = e.dataset.phone;
+
+    document.getElementById("name").value = editName;
+    document.getElementById("email").value = editEmail;
+    document.getElementById("phone").value = editPhone;
+
+    form.style.display = "block";
+
+    // Toggles the Submit button so that it now Updates an existing contact instead of posting a new one
+    submitBtnToUpdate = true;
+};
