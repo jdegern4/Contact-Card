@@ -36,7 +36,7 @@ form.addEventListener("submit", (event) => {
 
   // Post form data to IndexedDB OR Edit an existing card in IndexedDB
   if (submitBtnToUpdate == false) {
-    postDb(name, email, phone, profile);
+    postDB(name, email, phone, profile);
   } else {
     fetchCards();
     // Toggles the submit button back to POST functionality
